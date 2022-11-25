@@ -1,7 +1,15 @@
 <template>
   <div id="app">
     <HeaderComp />
-    <MainComp v-for="(elem, index) in dataSongs" :key="index" :card="elem" />
+    <div class="container-main">
+      <div class="container-card">
+        <MainComp
+          v-for="(elem, index) in dataSongs"
+          :key="index"
+          :card="elem"
+        />
+      </div>
+    </div>
   </div>
 </template>
 
@@ -37,4 +45,14 @@ export default {
 };
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+.container-main {
+  display: flex;
+  justify-content: center;
+}
+.container-card {
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+}
+</style>

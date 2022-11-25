@@ -1,14 +1,16 @@
 <template>
   <div class="container-card">
-    <div class="card" style="width: 18rem">
-      <img :src="card.poster" class="card-img-top" alt="" />
+    <div class="card text-center" style="width: 18rem">
+      <img :src="card.poster" class="card-img-top p-3" alt="" />
       <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
-        </p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+        <h5 class="card-title fs-4 text-white">{{ card.title }}</h5>
+
+        <div class="text-secondary">
+          {{ card.author }}
+        </div>
+        <div class="text-secondary">
+          {{ card.year }}
+        </div>
       </div>
     </div>
   </div>
@@ -29,6 +31,8 @@ export default {
   width: calc(100% / 5);
   padding: 20px;
 }
+
 .card {
+  background-color: #2d3a46;
 }
 </style>

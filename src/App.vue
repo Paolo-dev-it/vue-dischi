@@ -55,4 +55,7 @@ export default {
   flex-wrap: wrap;
   width: 80%;
 }
+#app {
+  background-color: #1e2d3b;
+}
 </style>

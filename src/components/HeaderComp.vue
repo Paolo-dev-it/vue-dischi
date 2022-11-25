@@ -19,6 +19,7 @@ export default {
   width: 100%;
   background-color: #2d3a46;
   padding: 10px;
+  height: 10vh;
 }
 img {
   width: 50px;

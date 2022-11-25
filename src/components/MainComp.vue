@@ -1,7 +1,11 @@
 <template>
   <div class="container-card">
     <div class="card text-center" style="width: 18rem">
-      <img :src="card.poster" class="card-img-top p-3" alt="" />
+      <img
+        :src="card.poster"
+        class="card-img-top p-3 text-white"
+        alt="Immagine non disponibile"
+      />
       <div class="card-body">
         <h5 class="card-title fs-4 text-white">{{ card.title }}</h5>
 

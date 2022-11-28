@@ -12,8 +12,8 @@
         </option>
       </select>
     </div>
-    <div class="container-main">
-      <div class="container-card">
+    <div class="container-main vh-100">
+      <div class="container-card h-50">
         <MainComp
           v-for="(elem, index) in funzioneComputed"
           :key="index"

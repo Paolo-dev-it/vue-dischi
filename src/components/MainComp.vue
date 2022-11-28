@@ -33,6 +33,7 @@ export default {
 <style lang="scss" scoped>
 .container-card {
   width: calc(100% / 5);
+
   padding: 20px;
 }
 

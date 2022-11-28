@@ -1,6 +1,17 @@
 <template>
   <div id="app">
     <HeaderComp />
+    <div class="container">
+      <select name="" id="">
+        <option
+          :value="element"
+          v-for="(element, index) in dataSelect"
+          :key="index"
+        >
+          {{ element }}
+        </option>
+      </select>
+    </div>
     <div class="container-main">
       <div class="container-card">
         <MainComp
@@ -26,7 +37,8 @@ export default {
   },
   data() {
     return {
-      dataSongs: "",
+      dataSongs: [],
+      dataSelect: [],
     };
   },
   mounted() {
@@ -39,6 +51,12 @@ export default {
         .then((response) => {
           this.dataSongs = response.data.response;
           console.log(this.dataSongs);
+
+          this.dataSongs.forEach((genreSingle) => {
+            if (!this.dataSelect.includes(genreSingle.genre)) {
+              this.dataSelect.push(genreSingle.genre);
+            }
+          });
         });
     },
   },

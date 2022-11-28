@@ -3,6 +3,18 @@
     <div class="header">
       <img src="../assets/logo-small.svg" alt="" />
     </div>
+    <!-- <div>
+      <select name="" id="" v-model="userSelection">
+        <option
+          :value="element"
+          v-for="(element, index) in dataSelect"
+          :key="index"
+          @keyup="$emit('nomeEmit', userSelection)"
+        >
+          {{ element }}
+        </option>
+      </select>
+    </div> -->
   </div>
 </template>
 

@@ -15,14 +15,9 @@
     <div class="container-main">
       <div class="container-card">
         <MainComp
-          v-for="(elem, index) in dataSongs"
+          v-for="(elem, index) in funzioneComputed"
           :key="index"
           :card="elem"
-          :class="
-            elem.genre == userSelection
-              ? 'd-block d-flex justify-content-center'
-              : 'd-none'
-          "
         />
       </div>
     </div>
@@ -64,6 +59,18 @@ export default {
             }
           });
         });
+    },
+  },
+
+  computed: {
+    funzioneComputed() {
+      if (this.userSelection == "") {
+        return this.dataSongs;
+      } else {
+        return this.dataSongs.filter((elem) => {
+          return elem.genre == this.userSelection;
+        });
+      }
     },
   },
 };

@@ -2,7 +2,7 @@
   <div id="app">
     <HeaderComp />
     <div class="container">
-      <select name="" id="">
+      <select name="" id="" v-model="userSelection">
         <option
           :value="element"
           v-for="(element, index) in dataSelect"
@@ -18,6 +18,11 @@
           v-for="(elem, index) in dataSongs"
           :key="index"
           :card="elem"
+          :class="
+            elem.genre == userSelection
+              ? 'd-block d-flex justify-content-center'
+              : 'd-none'
+          "
         />
       </div>
     </div>
@@ -39,6 +44,7 @@ export default {
     return {
       dataSongs: [],
       dataSelect: [],
+      userSelection: [],
     };
   },
   mounted() {
